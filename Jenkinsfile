@@ -12,10 +12,10 @@ pipeline {
   }
     post{
       success{
-        emailext attachLog: true, body: 'Email sent out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'rs.ranjitswain@gmail.com'
+        emailext attachLog: true, body: 'mail sent out from jenkins', subject: 'Test mail -success', to: 'deepak.sekar@cyberium.info'
       }
       failure{
-        emailext attachLog: true, body: 'Email sent out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'rs.ranjitswain@gmail.com'
+        emailext attachLog: true, body: 'mail sent out from jenkins', subject: 'Test mail-failed', to: 'deepak.sekar@cyberium.info'
       }
     }
 }
